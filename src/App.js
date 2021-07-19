@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { ThemeProvider } from 'styled-components';
+import GlobalStyle from './styles/global-style'
+import SliderContainer from './components/slider-section';
 
-function App() {
+import theme from './styles/theme'
+const App=()=> {
+  const sliders = [
+    {id:1,title:'title one',src:'https://www.archerply.com/images/hm-prod/platinum-ply4.png',description:'test, test',date: 'July 18 2120',user:'Taher shoker',numVotes:120},
+    {id:2,title:'title two',src:'https://www.archerply.com/images/hm-prod/platinum-ply4.png',description:'test, test',date: 'July 18 2120',user:'Taher shoker',numVotes:120},
+    {id:3,title:'title three',src:'https://www.archerply.com/images/hm-prod/platinum-ply4.png',description:'test, test',date: 'July 18 2120',user:'Taher shoker',numVotes:120},
+    {id:4,title:'title four',src:'https://www.archerply.com/images/hm-prod/platinum-ply4.png',description:'test, test',date: 'July 18 2120',user:'Taher shoker',numVotes:120},
+    {id:5,title:'title five',src:'https://www.archerply.com/images/hm-prod/platinum-ply4.png',description:'test, test',date: 'July 18 2120',user:'Taher shoker',numVotes:120},
+    {id:6,title:'title four',src:'https://www.archerply.com/images/hm-prod/platinum-ply4.png',description:'test, test',date: 'July 18 2120',user:'Taher shoker',numVotes:120},
+    {id:7,title:'title five',src:'https://www.archerply.com/images/hm-prod/platinum-ply4.png',description:'test, test',date: 'July 18 2120',user:'Taher shoker',numVotes:120}
+  ]
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <GlobalStyle/>
+    <ThemeProvider theme={theme}>
+    <SliderContainer sliders={sliders}/>
+    </ThemeProvider>
+    </> 
   );
 }
 

@@ -1,0 +1,54 @@
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.swiper-container-horizontal > .swiper-scrollbar {
+  background-color: #42464a;
+  margin: 0 67px;
+  max-width: 89%;
+}
+.swiper-container-free-mode > .swiper-wrapper {
+  padding: 24px 0;
+  margin: 0 80px;
+}
+.swiper-scrollbar-drag {
+  background-color: #fff;
+  width: 140px !important;
+}
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
+@media only screen and (max-width: 1280px) {
+  .swiper-container-free-mode > .swiper-wrapper {
+    margin: 0 40px;
+  }
+  .swiper-container-horizontal > .swiper-scrollbar {
+    margin: 0 40px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .swiper-container-free-mode > .swiper-wrapper {
+    margin: 0 32px;
+  }
+  .swiper-container-horizontal > .swiper-scrollbar {
+    margin: 0 32px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .swiper-container-free-mode > .swiper-wrapper {
+    margin: 0 16px;
+  }
+  .swiper-container-horizontal > .swiper-scrollbar {
+    margin: 0 16px;
+  }
+}
